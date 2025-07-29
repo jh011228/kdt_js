@@ -5,8 +5,7 @@
 let student = [{
   name : '짱구',
   age : 5,
-  subject : 'java'
-},
+  subject : 'java'},
   {name : '유리', age : 5, subject : 'javascript'},
   {name : '철수', age : 5, subject : 'dbms'}
 ];

@@ -27,9 +27,8 @@ animals.map((element) =>{
 console.log(newAnimals);
 //2) 배열의 길이를 구하고 출력하기
 console.log(newAnimals.length);
-
 //3) 배열에서 특정요소를 삭제하기(3) 메소드 사용
-delete newAnimals[3];
+ newAnimals.splice(3,1);
 console.log(newAnimals);
 //4) 배열에서 특정 값(cat)을 검색하고 그 값의 인덱스 출력하기
 newAnimals.filter((element,index)=>{
@@ -46,9 +45,17 @@ console.log(colors);
 //1) 배열의 요소를 객체로 변환하여 새로운 배열을 만들기
 //  주어진 배열의 값을 객체의 value 속성으로 저장할것
 const data = [10, 20, 30];
+//이전 방식
 const data2 = [{ value : data[0]},{value : data[1]},{value : data[2]}];
+//현재방식
+const data3 = data.map((element,idx)=>{
+  return {
+    value : data[idx]
+  }
+});
 
 console.log(data2);
+console.log(data3);
 //출력결과 : [{value: 10}, {value: 20}, {value: 30}]
 
 //2) 배열을 활용하여 특정값을 기준으로 객체 업데이트하기

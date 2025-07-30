@@ -12,7 +12,7 @@ function eventCheck(age){
   return result;
 }
 const name1 = '최장현';
-const age = '25';
+const age = 25;
 //출력결과
 // 본인이름님은 00살 입장가능여부는 결과 
 // 이벤트 당첨여부
@@ -27,7 +27,12 @@ function scoreCheck(score){
   if(score>=60)return '합격';
   else{return '불합격'};
 }
-console.log(`${stuName}님의 점수는 ${stuScore}점으로 ${scoreCheck(stuScore)}입니다.`);
+
+function goodStu(score){
+  if(score===100)return '장학생';
+  else{return '일반학생'};
+}
+console.log(`${stuName}님의 점수는 ${stuScore}점으로 ${scoreCheck(stuScore)}이고, ${goodStu(stuScore)}입니다.`);
 //3. 학생의 이름과 성적을 입력받아서 성적에 따른 학점 출력
 // 90점 이상 : A, 80점 이상 : B,  70점이상 : C, 그외 : F
 function gradeCheck(name,score){
